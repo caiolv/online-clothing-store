@@ -1,0 +1,16 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background: #fff;
+    padding: 0 101px;
+
+    nav {
+        a {
+            text-decoration: none;
+            color: $dark-gray;
+            padding: 4px 16px 32px;
+        }
+    }
+}
