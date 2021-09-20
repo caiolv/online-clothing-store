@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import { Home } from './pages/Home';
+import { Category } from './pages/Category';
 
 import Header from './components/Header';
 
 function App() {
   return (
     <BrowserRouter>
-      <Header /> 
-      <Route path="/" exact component={Home} />
+      <Header />
+      <Route path="/" exact component={Category} />
     </BrowserRouter>
   );
 }

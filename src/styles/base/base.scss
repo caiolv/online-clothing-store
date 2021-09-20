@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+#root {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
 body {
     background: #fff;
     color: #1D1F22;
@@ -21,4 +27,9 @@ button {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+}
+
+section {
+    padding: 0 100px;
+    margin-top: 80px;
 }

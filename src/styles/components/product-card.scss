@@ -1,0 +1,26 @@
+#product-card {
+    padding: 16px;
+    transition: all 0.3s;
+
+    &:hover {
+        box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
+    }
+
+    img {
+        height: 330px;
+        width: 354px;
+    }
+
+    p {
+        margin-top: 24px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 160%;
+    }
+
+    strong {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+    }
+}
