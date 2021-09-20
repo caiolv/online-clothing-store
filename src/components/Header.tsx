@@ -16,10 +16,10 @@ export default class Header extends Component {
                 <a href="/#"> <img id="logo" src={logo} alt="Logo" /> </a>
                 <div>
                     <button>
-                        $ <img src={chevronDown} />
+                        $ <img src={chevronDown} alt="Arrow down" />
                     </button>
                     <button>
-                        <img src={cart} />
+                        <img src={cart} alt="Cart" />
                     </button>
                 </div>
             </div>
