@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import ProductCard from '../components/ProductCard';
 
-export class Category extends Component {
+export default class Category extends Component {
     render() {
         return (
             <section id="category">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import { Category } from './pages/Category';
+import Category from './pages/Category';
 
 import Header from './components/Header';
 
