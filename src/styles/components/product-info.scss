@@ -1,0 +1,52 @@
+.product-title {
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 27px;
+  }
+  
+  .product-subtitle {
+    font-family: 'Raleway';
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 27px;
+    margin-top: 16px;
+  }
+
+  b.price {
+      display: block;
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 18px;
+      padding: 28px 0px;
+  }
+
+  .sizes {
+      display: flex;
+
+      button {
+          width: 63px;
+          height: 45px;
+          margin-right: 12px;
+          color: #292929;
+          border: 1px solid #1D1F22;
+          font-family: Source Sans Pro;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 18px;
+
+          &.selected {
+              background: #1D1F22;
+              color: #fff;
+          }
+
+          &:disabled {
+              cursor: not-allowed;
+              color: #A6A6A6;
+              border: 1px solid #A6A6A6;
+          }
+      }
+  }

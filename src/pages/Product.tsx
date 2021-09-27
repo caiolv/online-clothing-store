@@ -17,8 +17,8 @@ export default class Product extends Component {
                 <img className="preview" src={product} width="" height="80" alt="product" />
 
                 <main>
-                    <h1>Apollo</h1>
-                    <h2>Running Short</h2>
+                    <h1 className="product-title">Apollo</h1>
+                    <h2 className="product-subtitle">Running Short</h2>
 
                     <span>Size: </span>
                     <div className="sizes">
@@ -29,7 +29,7 @@ export default class Product extends Component {
                     </div>
 
                     <span>Price:</span>
-                    <b>$50.00</b>
+                    <b className="price">$50.00</b>
 
                     <Button>Add to cart</Button>
 
