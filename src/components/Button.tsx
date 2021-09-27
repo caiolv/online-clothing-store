@@ -1,7 +1,5 @@
 import { Component, ButtonHTMLAttributes } from 'react';
 
-import '../styles/button.scss';
-
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 export default class Button extends Component<ButtonProps> {
@@ -11,7 +9,7 @@ export default class Button extends Component<ButtonProps> {
 
     render() {
         return (
-            <button className="button" {...this.props}/>
+            <button className="button" {...this.props} />
         )
     }
 }
