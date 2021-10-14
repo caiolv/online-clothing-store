@@ -5,6 +5,7 @@
     height: 80px;
     background: #fff;
     padding: 0 101px;
+    position: relative;
 
     nav {
         flex: 1;
@@ -41,7 +42,7 @@
 
         button {
             display: flex;
-            font-size: 18px;
+            font-size: 1.125rem;
             font-weight: 500;
             line-height: 1.6;
             padding: 0px 5px;
