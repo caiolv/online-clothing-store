@@ -33,14 +33,10 @@ export default class Header extends Component<{}, CartMenu> {
                     <button>
                         $ <img src={chevronDown} alt="Arrow down" />
                     </button>
-                    <button
-                        onClick={this.toggleCart}
-                    >
+                    <button onClick={this.toggleCart}>
                         <img src={cart} alt="Cart" />
                     </button>
-                    {
-                        this.state.cartMenuOpened && <CartWindow />
-                    }
+                    <CartWindow isOpen={this.state.cartMenuOpened} />
                 </div>
             </div>
         )

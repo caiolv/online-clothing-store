@@ -4,6 +4,7 @@
     width: 325px;
     padding: 16px;
     z-index: 10;
+    transition: visibility 0s, opacity 0.2s ease-out;
 
     top: 80px;
     right: 87px;
