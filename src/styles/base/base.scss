@@ -5,7 +5,6 @@
 }
 
 #root {
-    max-width: 1440px;
     margin: 0 auto;
     padding-bottom: 50px;
 }
@@ -31,5 +30,11 @@ button {
 
 section {
     padding: 0 100px;
-    margin-top: 80px;
+    max-width: 1440px;
+    margin: 80px auto 0;
+}
+
+[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
