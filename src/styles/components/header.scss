@@ -45,13 +45,30 @@
             font-size: 1.125rem;
             font-weight: 500;
             line-height: 1.6;
-            padding: 0px 5px;
+            margin: 0px 5px;
             align-items: center;
-    
+            position: relative;
+
             img {
                 height: 100%;
                 width: 100%;
                 margin-left: 10px;
+            }
+
+            span {
+                position: absolute;
+                left: 92.5%;
+                right: 6.11%;
+                bottom: 43.75%;
+                font: 700 0.875rem 'Roboto', sans-serif;
+                background: $dark-gray;
+                color: $white;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
@@ -66,7 +83,9 @@
         right: 0;
         bottom: 0;
         background: rgba(57, 55, 72, 0.22);
+        opacity: 0;
         z-index: 2;
+        transition: visibility 0.2s, opacity 0.2s ease;
 
     }
 }

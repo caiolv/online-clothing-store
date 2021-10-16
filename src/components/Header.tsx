@@ -35,13 +35,18 @@ export default class Header extends Component<{}, CartMenu> {
                     </button>
                     <button onClick={this.toggleCart}>
                         <img src={cart} alt="Cart" />
+                        <span>2</span>
                     </button>
                     <CartWindow isOpen={this.state.cartMenuOpened} />
                 </div>
                 <div 
                     id="overlay"
                     onClick={this.toggleCart}
-                    className={this.state.cartMenuOpened ? "visible" : "hidden"}
+                    className={
+                        this.state.cartMenuOpened
+                            ? "visible one-opacity" 
+                            : "hidden zero-opacity"
+                    }
                 />
             </div>
         )

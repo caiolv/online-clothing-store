@@ -11,9 +11,10 @@ export default class CartWindow extends Component<IsOpen> {
         return (
             <div 
                 id="cart-window"
-                className={ this.props.isOpen
-                                ? "visible one-opacity" 
-                                : "hidden zero-opacity"
+                className={ 
+                    this.props.isOpen
+                        ? "visible one-opacity" 
+                        : "hidden zero-opacity"
                 }
             >
                 <strong>My bag, </strong> 2 items
