@@ -4,21 +4,32 @@ import logo from "../images/logo.svg";
 import cart from "../images/cart.svg";
 import chevronDown from "../images/chevron-down.svg";
 import CartWindow from './CartWindow';
+import CurrencyWindow from './CurrencyWindow';
 
-type CartMenu = {
+type HeaderStates = {
     cartMenuOpened: boolean;
+    currencyMenuOpened: boolean;
 };
 
-export default class Header extends Component<{}, CartMenu> {
-    state: CartMenu = {
+export default class Header extends Component<{}, HeaderStates> {
+    state: HeaderStates = {
         cartMenuOpened: false,
+        currencyMenuOpened: false,
     };
 
     toggleCart = () => {
         this.setState((prevState) => ({
-            cartMenuOpened: !prevState.cartMenuOpened
+            cartMenuOpened: !prevState.cartMenuOpened,
+            currencyMenuOpened: !prevState.cartMenuOpened && false, //close when cart opened
         }));
-    }   
+    }
+
+    toggleCurrency = () => {
+        this.setState((prevState) => ({
+            currencyMenuOpened: !prevState.currencyMenuOpened,
+            cartMenuOpened: !prevState.currencyMenuOpened && false, //close when currency opened
+        }));
+    }
 
     render() {
         return (
@@ -30,9 +41,10 @@ export default class Header extends Component<{}, CartMenu> {
                 </nav>
                 <a href="/#"> <img id="logo" src={logo} alt="Logo" /> </a>
                 <div>
-                    <button>
+                    <button onClick={this.toggleCurrency}>
                         $ <img src={chevronDown} alt="Arrow down" />
                     </button>
+                    <CurrencyWindow isOpen={this.state.currencyMenuOpened} />
                     <button onClick={this.toggleCart}>
                         <img src={cart} alt="Cart" />
                         <span>2</span>

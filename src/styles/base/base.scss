@@ -27,6 +27,11 @@ button {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+    transition: all 0.2s linear;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 section {
