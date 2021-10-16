@@ -20,8 +20,20 @@ export default class CartWindow extends Component<IsOpen> {
                 <strong>My bag, </strong> 2 items
                 <CartProduct />
                 <CartProduct />
-                <CartProduct />
-                
+
+                <div className="total">
+                    <strong>Total</strong>
+                    <b>$ 100.00</b>
+                </div>
+
+                <div className="btn-group">
+                    <button className="button button-secondary">
+                        View bag
+                    </button>
+                    <button className="button">
+                        Checkout
+                    </button>
+                </div>
             </div>
         )
     }

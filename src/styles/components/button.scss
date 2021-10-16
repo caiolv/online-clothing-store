@@ -1,8 +1,20 @@
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .button {
     height: 52px;
     width: 100%;
-    margin: 20px 0px;
     background: $primary-color;
     color: $white;
+    text-transform: uppercase;
+}
+
+.button-secondary {
+    border: 1px solid $dark-gray;
+    background: $white;
+    color: $dark-gray;
     text-transform: uppercase;
 }
