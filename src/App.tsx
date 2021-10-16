@@ -12,9 +12,9 @@ function App() {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route path="/" exact component={Category} />
-        <Route path="/product" component={Product} />
-        <Route path="/cart" component={Cart} />
+            <Route path="/" exact component={Category} />
+            <Route path="/product" component={Product} />
+            <Route path="/cart" component={Cart} />
       </Switch>
     </BrowserRouter>
   );

@@ -4,7 +4,7 @@
     width: 325px;
     padding: 16px;
     z-index: 10;
-    transition: visibility 0s, opacity 0.2s ease-out;
+    transition: visibility 0.2s, opacity 0.2s ease-in-out;
 
     top: 80px;
     right: 87px;
@@ -12,6 +12,4 @@
     strong {
         font-size: 1rem;
     }
-
-    
 }

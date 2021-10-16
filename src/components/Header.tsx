@@ -38,6 +38,11 @@ export default class Header extends Component<{}, CartMenu> {
                     </button>
                     <CartWindow isOpen={this.state.cartMenuOpened} />
                 </div>
+                <div 
+                    id="overlay"
+                    onClick={this.toggleCart}
+                    className={this.state.cartMenuOpened ? "visible" : "hidden"}
+                />
             </div>
         )
     }
