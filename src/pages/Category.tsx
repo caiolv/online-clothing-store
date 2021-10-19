@@ -6,7 +6,7 @@ import { LOAD_CATEGORY } from '../GraphQL/Queries';
 
 import ensure from '../utils/ensure';
 
-import { IProductData, IPricesData } from '../types/product.type';
+import { IProductData, IPricesData } from '../types/types';
 
 import ProductCard from '../components/ProductCard';
 import Loader from '../components/Loader';
