@@ -23,12 +23,18 @@ export default class Header extends Component<{}, HeaderStates> {
         items: [],
     };
 
-    componentDidMount() {
-        client.query({
+    fetchCategories = async () => {
+        const { data } = await client.query({
             query: LOAD_CATEGORIES
-        }).then(({ data, loading }) => this.setState({
+        });
+        
+        this.setState({
             items: data.categories.map((category: { name: string; }) => category.name)
-        }));
+        });
+    }
+
+    componentDidMount() {
+        this.fetchCategories();
     }
 
     toggleCart = () => {
