@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/client';
 
 import { client } from './service/client';
@@ -16,7 +16,9 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
-              <Route path="/" exact component={Category} />
+              <Route exact path="/">
+                  <Redirect to="/category/clothes" />
+              </Route>
               <Route path="/category/:category" component={Category} />
               <Route path="/product" component={Product} />
               <Route path="/cart" component={Cart} />
