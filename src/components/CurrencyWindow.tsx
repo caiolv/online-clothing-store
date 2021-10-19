@@ -1,11 +1,40 @@
 import React, { Component } from 'react';
 
-type IsOpen = {
+import { client } from '../service/client';
+
+import { LOAD_CURRENCIES } from '../GraphQL/Queries';
+
+type CartWindowProps = {
     isOpen: boolean;
 };
 
-export default class CartWindow extends Component<IsOpen> {
+type CartWindowState = {
+    loading: boolean;
+    currencies: string[];
+}
+
+export default class CartWindow extends Component<CartWindowProps, CartWindowState> {
+    state: CartWindowState = {
+        loading: false,
+        currencies: [],
+    }
+
+    fetchCurrencies = async () => {
+        this.setState({ loading: true });
+        const { data } = await client.query({
+            query: LOAD_CURRENCIES
+        });
+        const { currencies } = data;
+        
+        this.setState({ currencies, loading: false });
+    }
+
+    componentDidMount() { 
+        this.fetchCurrencies();
+    }
+
     render() {
+        const { currencies } = this.state;
         return (
             <div 
                 id="currency-window"
@@ -15,15 +44,13 @@ export default class CartWindow extends Component<IsOpen> {
                         : "hidden zero-opacity"
                 }
             >
-                <button>
-                    $ USD
-                </button>
-                <button>
-                    € EUR
-                </button>
-                <button>
-                    ¥ JPY
-                </button>
+                {
+                    currencies.map(cur => (
+                        <button>
+                            $ {cur}
+                        </button>
+                    ))
+                }
             </div>
         )
     }
