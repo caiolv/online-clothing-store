@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+
+import { client } from '../service/client';
+import { LOAD_CATEGORIES } from '../GraphQL/Queries';
 
 import logo from "../images/logo.svg";
 import cart from "../images/cart.svg";
@@ -9,13 +13,23 @@ import CurrencyWindow from './CurrencyWindow';
 type HeaderStates = {
     cartMenuOpened: boolean;
     currencyMenuOpened: boolean;
+    items: string[];
 };
 
 export default class Header extends Component<{}, HeaderStates> {
     state: HeaderStates = {
         cartMenuOpened: false,
         currencyMenuOpened: false,
+        items: [],
     };
+
+    componentDidMount() {
+        client.query({
+            query: LOAD_CATEGORIES
+        }).then(({ data, loading }) => this.setState({
+            items: data.categories.map((category: { name: string; }) => category.name)
+        }));
+    }
 
     toggleCart = () => {
         this.setState((prevState) => ({
@@ -32,12 +46,22 @@ export default class Header extends Component<{}, HeaderStates> {
     }
 
     render() {
+        const { items } = this.state;
+
         return (
             <div id="header">
                 <nav>
-                    <a className="selected" href="/#">Women</a>
-                    <a href="/#">Men</a>
-                    <a href="/#">Kids</a>
+                    {
+                        items && items.map(item => (
+                            <NavLink
+                                exact
+                                activeClassName="selected"
+                                to={`/category/${item}`}
+                            >
+                                {item}
+                            </NavLink>
+                        ))
+                    }
                 </nav>
                 <a href="/#"> <img id="logo" src={logo} alt="Logo" /> </a>
                 <div>

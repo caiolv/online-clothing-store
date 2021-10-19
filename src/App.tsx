@@ -17,6 +17,7 @@ function App() {
         <Header />
         <Switch>
               <Route path="/" exact component={Category} />
+              <Route path="/category/:category" component={Category} />
               <Route path="/product" component={Product} />
               <Route path="/cart" component={Cart} />
         </Switch>

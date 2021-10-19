@@ -4,6 +4,7 @@ import cartWhite from "../images/cart_white.svg";
 
 interface Props {
     product: {
+        id: string;
         name: string;
         inStock: boolean;
         gallery: string[];
