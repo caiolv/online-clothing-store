@@ -54,6 +54,7 @@ export default class Header extends Component<{}, HeaderStates> {
                     {
                         items && items.map(item => (
                             <NavLink
+                                key={item}
                                 exact
                                 activeClassName="selected"
                                 to={`/category/${item}`}
