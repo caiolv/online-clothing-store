@@ -18,7 +18,17 @@ query ($category: String!){
             gallery,
             description,
             category,
+            prices {
+                currency,
+                amount
+            }
         }
     }
+}
+`;
+
+export const LOAD_CURRENCIES = gql`
+query {
+    currencies
 }
 `;

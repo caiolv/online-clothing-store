@@ -2,15 +2,10 @@ import React, { Component } from 'react';
 
 import cartWhite from "../images/cart_white.svg";
 
+import { IProductData } from '../types/product.type';
+
 interface Props {
-    product: {
-        id: string;
-        name: string;
-        inStock: boolean;
-        gallery: string[];
-        description: string;
-        category: string;
-    }
+    product: IProductData,
 }
 
 export default class ProductCard extends Component<Props> {
@@ -20,7 +15,7 @@ export default class ProductCard extends Component<Props> {
             <div id="product-card">
                 <img src={product.gallery[0]} alt="Product description" />
                 <p>{product.name}</p>
-                <strong>$50.00</strong>
+                <strong>$ {product.price.amount}</strong>
                 <div>
                     <img src={cartWhite} alt="Cart" />
                 </div>
